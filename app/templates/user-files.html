@@ -1,0 +1,49 @@
+{% extends "base-user.html" %}
+
+{% block title %} My files {% endblock%}
+
+{% block body %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1> MY FILES </h1>
+        </div>
+        <div class="col-md-12">
+          <p>
+            <b> Private files: </b>
+          </p>
+        </div>
+        <div class="col-md-12">
+          {% if len(private_files)!=0 %}
+          <ul class="">
+            {% for file in private_files %}
+            <li> &nbsp;&nbsp;&nbsp;&nbsp; {{file.name}}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+            <p>You don't have private files!</p>
+          {% endif %}
+        </div>
+        <div class="col-md-12">
+          <p>
+            <b> Public files: </b>
+          </p>
+        </div>
+        <div class="col-md-12">
+          {% if len(public_files)!=0 %}
+          <ul class="">
+            {% for file in public_files %}
+            <li> &nbsp;&nbsp;&nbsp;&nbsp; {{file.name}}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+            <p>You don't have public files!</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

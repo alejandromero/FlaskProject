@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block title %} File Browser {% endblock %}
-{% block body %}
-<h1>File Browser</h1>
-<form method="get", action={{url_for('search')}}>
-	<p>Name of the file: <input name="filename" type="text"></p>
-	<input type="submit" value="Search">
-</form>
-{% endblock %}

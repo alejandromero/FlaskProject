@@ -1,0 +1,48 @@
+{% extends "base-index.html" %}
+
+{% block title %} Home {% endblock%}
+
+{% block body %}
+
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1 text-center py-2">HALLEY KEEPER</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="offset-md-4 text-center">
+          <img class="img-fluid d-block" src="../static/imgs/image1(white).png" width="400"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-center">A perfect way to manage your files, share some of them publicly with anyone, keep some others private for yourself, it's your decision.
+            <br> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12 text-center py-2">
+              <a class="btn btn-primary w-25 px-5 my-3" href={{url_for('publicbrowser')}}>Search a file now!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

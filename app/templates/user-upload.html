@@ -1,0 +1,29 @@
+{% extends "base-user.html" %}
+
+{% block title %} Upload {% endblock%}
+
+{% block body %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-md-12">
+          <form enctype="multipart/form-data" method="POST" class="w-100">
+            <div class="form-group">
+              <label>Select the file that's going to be uploaded</label>
+              <input type="file" name="file" class="form-control">
+            </div>
+            <input type="checkbox" name="publicUpload" value="True">Public File
+            <br>
+            <br>
+            <input type="checkbox" name="privateUpload" value="True">Private File
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

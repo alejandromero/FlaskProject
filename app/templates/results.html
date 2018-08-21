@@ -1,0 +1,45 @@
+{% extends template_extend %}
+
+{% block title %} Search {% endblock%}
+
+{% block body %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="py-5"> <!-- text-center -->
+              {% if public==True %}
+                  <p><b>Public files:</b> </p>
+                  {% if len(public_results)!=0 %}
+                    <ul class="">
+                    {% for result_object in public_results %}
+                        <li> &nbsp;&nbsp;&nbsp;&nbsp; {{result_object.name}}</li>
+                    {% endfor %}
+                    </ul>
+                  {% else %}
+                    <p>No public files found with that name.</p>
+                  {% endif %}
+              {% endif %}
+
+              {% if private==True %}
+              <p><b>Public files:</b> </p>
+                  {% if len(private_results)!=0 %}
+                    <ul class="">
+                    {% for result_object in private_results %}
+                        <li> &nbsp;&nbsp;&nbsp;&nbsp; {{result_object.name}}</li>
+                    {% endfor %}
+                    </ul>
+                  {% else %}
+                    <p>No private files found with that name.</p>
+                  {% endif %}
+              {% endif %}
+
+
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

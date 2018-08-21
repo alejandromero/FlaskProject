@@ -1,0 +1,31 @@
+{% extends "base-index.html" %}
+
+{% block title %} Search {% endblock%}
+
+{% block body %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="{{ url_for('results')}}">
+            <div class="form-group">
+              <label>Name of the file to search:</label>
+              <input type="text" class="form-control" id="filename" name="filename"> </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="py-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

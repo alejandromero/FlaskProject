@@ -1,0 +1,37 @@
+{% extends "base-user.html" %}
+
+{% block title %} Search {% endblock%}
+
+{% block body %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="{{url_for('results')}}" class="">
+            <div class="form-group">
+              <label>Name of the file to search, without extension:</label>
+              <input type="text" placeholder="Filename" name="filename " class="form-control"> </div>
+            <input type="checkbox" name="publicSearch" value="True">Public Search
+            <br>
+            <br>
+            <input type="checkbox" name="privateSearch" value="True">Private Search
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

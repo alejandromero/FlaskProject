@@ -1,0 +1,35 @@
+{% extends "base-index.html" %}
+
+{% block title %} Contact {% endblock%}
+
+{% block body %}
+
+  <div class="py-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15026.355842834315!2d-101.2063046!3d19.6875341!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51e44e3df18f7284!2sFacultad+de+Ciencias+F%C3%ADsico+Matem%C3%A1ticas+UMSNH!5e0!3m2!1ses-419!2smx!4v1534138647065"
+            width="550" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        </div>
+        <div class="col-md-6">
+          <h1>Contact us</h1>
+          <p>We would love to know your opinion.</p>
+          <form>
+            <div class="form-group">
+              <label for="InputName">Your name</label>
+              <input type="text" class="form-control" id="InputName" placeholder="Your name"> </div>
+            <div class="form-group">
+              <label for="InputEmail1">Email address</label>
+              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email"> </div>
+            <div class="form-group">
+              <label for="Textarea">Write here</label>
+              <textarea class="form-control" id="Textarea" rows="3" placeholder="Type here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
